@@ -107,6 +107,10 @@ public class HttpUtil {
                 getType();
         List<Comment> comments = GSON.fromJson(responseComments.body(),type1);
 
+        writeInJson(inputId, max, comments);
+    }
+
+    private static void writeInJson(String inputId, int max, List<Comment> comments) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(comments);
         OutputStream fos = new FileOutputStream("user-" + inputId + "-post-"+ max +"-comments.json");

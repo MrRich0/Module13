@@ -53,13 +53,13 @@ public class Main {
         System.out.println();
 
         System.out.println("###TASK 2###");
-        System.out.print("Введіть номер ID інформацію якого потрібно надрукувати:");
+        System.out.print("Введіть номер ID user,щоб вивести всі коментарі до останнього поста:");
         String idFindByIdPostMax = scanner.nextLine();
         util.findByIdPostMaxComments(idFindByIdPostMax);
         System.out.println();
 
         System.out.println("###TASK 3###");
-        System.out.print("Введіть номер ID інформацію якого потрібно надрукувати:");
+        System.out.print("Введіть номер ID user,щоб вивести всі його відкриті задачі:");
         String idSendTodo = scanner.nextLine();
         util.sendTodo(idSendTodo);
         System.out.println();
